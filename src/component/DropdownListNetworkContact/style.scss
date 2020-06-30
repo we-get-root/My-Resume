@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import "./../../fonts//font-awesome/scss/font-awesome.scss";
+
+$background: #b2b1cf;
+$white: #fff;
+$basColRed: #e62e31;
+
+.media-menu-xs,
+.media-menu-ms {
+  display: none;
+}
+.menu {
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  .share {
+    i.fa {
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: $background;
+      border-radius: 4px;
+    }
+    &:hover {
+      &.bottom {
+        .submenu {
+          @for $i from 1 through 5 {
+            li:nth-child(#{$i}) {
+              opacity: 1;
+              top: #{$i * 50}px;
+              transform: rotate(0deg);
+              border-top: 1px solid darken($white, 20%);
+              transition-delay: #{$i * 0.08}s;
+            }
+          }
+        }
+      }
+    }
+  }
+  .submenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      transition: all ease-in-out 0.5s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0;
+      a {
+        color: #212121;
+        &:hover {
+          i.fa {
+            color: #fff;
+          }
+          &.vk {
+            i.fa {
+              background: #3b5999;
+              transition: background.5s ease;
+            } 
+          }
+          &.github {
+            i.fa {
+              background: #252525;
+              transition: background .5s ease;
+            }
+          }
+          &.google-plus {
+            i.fa {
+              background: #dd4b39;
+              transition: background .5s ease;
+            }
+          }
+          &.instagram {
+            i.fa {
+              background: #e4405f;
+              transition: background .5s ease;
+            }
+          }
+        }
+      }
+    }
+    @for $i from 1 through 4 {
+      li:nth-child(#{$i}) {
+        transform: rotateX(#{$i * 45}deg);
+      }
+    }
+  }
+}

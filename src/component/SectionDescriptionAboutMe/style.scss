@@ -1,0 +1,31 @@
+$basColGre: #4f4f4f;
+
+.wrapper-for-about-me {
+  position: relative;
+  grid-column: 2;
+  h3 {
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "YanoneKaffeesatz-Bold", sans-serif;
+    letter-spacing: 2px;
+    font-size: 40px;
+    position: relative;
+  }
+  .description-about-me {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    h6 {
+      margin: 10px;
+      text-transform: uppercase;
+      font-family: "YanoneKaffeesatz-Light", sans-serif;
+      font-size: 25px;
+    }
+  }
+}

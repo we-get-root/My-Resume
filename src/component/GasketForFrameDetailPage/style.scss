@@ -1,0 +1,125 @@
+$basColRed: #e62e31;
+$basColGre: #4f4f4f;
+
+.content-section {
+  display: grid;
+  position: relative;
+  margin-bottom: 10px;
+  grid-template-columns: auto 1fr;
+  .progress-vert-line {
+    margin-right: 35px;
+    margin-left: 35px;
+    display: block;
+    grid-column: 1;
+    width: 5px;
+    height: 125%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    top: -10px;
+    background: $basColGre;
+    z-index: -1;
+  }
+  .media-progress-vert-line-xs,
+  .media-progress-vert-line-ms {
+    margin-right: 23px;
+    margin-left: 23px;
+  }
+  img {
+    transform: rotate(268deg);
+    position: absolute;
+    top: 5px;
+    left: 44px;
+    height: 26px;
+    width: 26px;
+    transition: transform 0.5s ease;
+  }
+  .media-arrow-xs,
+  .media-arrow-ms {
+    left: 29.5px;
+    top: 4px;
+    height: 20px;
+    width: 20px;
+  }
+  .imagine-hover_active {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-out;
+  }
+  .row-item {
+    grid-column: 2;  
+    .subtitle-content-section {
+      font-size: 35px;
+      margin: 0 0 0 0;
+      font-family: "YanoneKaffeesatz-Bold", sans-serif;
+      cursor: pointer;
+      position: relative;
+    }
+    .media-subtitle-content-section-xs,
+    .media-subtitle-content-section-ms {
+      font-size: 1.9rem;
+    }
+    .separator-content-title {
+      width: 70%;
+      height: 1.9px;
+      left: 35px;
+      background: $basColGre;
+      position: absolute;
+      transition: width 0.5s ease;
+    }
+    .separator-content-title__hover {
+      animation: scale-separator 20s infinite cubic-bezier(0, 0.68, 0.35, 0.64) both;
+    }
+    .separator-content-title__active {
+      width: 10%;
+    }
+    .media-separator-content-subtitle-xs,
+    .media-separator-content-subtitle-ms {
+      left: 25px;
+    }
+  }
+  
+
+  .wrapper-to-description-subtitle {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    ul {
+      list-style: none;
+      margin: 1px;
+      padding-left: 0;
+      li {
+        font-family: "YanoneKaffeesatz-Light", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 3px;
+        ul li {
+          padding: 0;
+          padding-left: 40px;
+          b {
+            font-size: 20px;
+            padding: 3px;
+          }
+        }
+      }
+    }
+  }
+  .media-wrapper-to-description-subtitle-xs ul li,
+  .media-wrapper-to-description-subtitle-ms ul li {
+    font-size: 16px;
+    b {
+      font-size: 19px;
+    }
+  }
+}
+
+@keyframes scale-separator {
+  0% {
+    width: 70%;
+  }
+  50% {
+    width: 10%;
+  }
+  100% {
+    width: 70%;
+  }
+}

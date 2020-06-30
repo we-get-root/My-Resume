@@ -1,0 +1,131 @@
+$basColRed: #e62e31;
+$basColGre: #4f4f4f;
+
+.section-detail-page {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  justify-content: center;
+  grid-template-rows: auto auto;
+  .header-section {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    width: 100%;
+    height: auto;
+    .icon-section {
+      width: 70px;
+      height: 70px;
+      background: $basColRed;
+      border-radius: 10em;
+      text-align: center;
+      color: #ffffff;
+      font-size: 35px;
+      position: relative;
+      i {
+        margin-top: 17px;
+      }
+    }
+    .media-icon-section-xs,
+    .media-icon-section-ms {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      i {
+        margin: 0;
+        font-size: 29px;
+      }
+    }
+    .title-section-detail-page {
+      margin: 0;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      font-family: "YanoneKaffeesatz-Bold", sans-serif;
+      font-size: 43px;
+      padding: 10px;
+      letter-spacing: -1px;
+      cursor: context-menu;
+    }
+    .media-title-section-detail-page-xs,
+    .media-title-section-detail-page-ms {
+      font-size: 2.2rem;
+      padding: 5px;
+    }
+    .separator-node-light {
+      margin-top: 35px;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      z-index: -1;
+      border-radius: 10em;
+      background-color: $basColGre;
+      grid-column: 3;
+    }
+    .media-separator-node-light-xs,
+    .media-separator-node-light-ms {
+      margin-top: 22px;
+    }
+  }
+  .wrapper-grid-for-content {
+    grid-column: 2;
+  }
+  .wrapper-for-gallery {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: auto;
+    .separator-gallery {
+      grid-column: 1;
+      display: block;
+      margin-left: 35px;
+      margin-right: 35px;
+      width: 5px;
+      height: 105%;
+      background: $basColGre;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .media-separator-gallery-xs,
+    .media-separator-gallery-ms {
+      margin-left: 23px;
+      margin-right: 23px;
+    }
+    .wrapper-items-gallery {
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 150px;
+      grid-gap: 10px;
+    }
+    .media-wrapper-items-gallery-sm,
+    .media-wrapper-items-gallery-xs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .media-wrapper-items-gallery-ms {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .button-section-gallery-more {
+      background: transparent;
+      border-top: 2px $basColGre solid;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      outline: none;
+      grid-column: 2;
+      padding: 5px;
+      margin: 5px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-family: "YanoneKaffeesatz-Light", sans-serif;
+      font-size: 19px;
+      cursor: pointer;
+      &:hover {
+        font-family: "YanoneKaffeesatz-Bold", sans-serif;
+      }
+    }
+  }
+}

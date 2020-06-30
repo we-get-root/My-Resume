@@ -1,0 +1,36 @@
+@import './fonts/index.scss';
+
+@mixin media-root-grid-from-xs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0px;
+}
+@mixin media-root-grid-from-lg {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-gap: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.root-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 10px;
+}
+.root-grid-lg,
+.root-grid-md,
+.root-grid-sm {
+  @include media-root-grid-from-lg();
+}
+
+.root-grid-xs,
+.root-grid-ms {
+  @include media-root-grid-from-xs();
+}
